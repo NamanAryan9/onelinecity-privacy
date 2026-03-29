@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — One Line City</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f5f0e8;
+      --ink: #1a1a1a;
+      --accent: #c8873a;
+      --muted: #7a7060;
+      --line: #d4c9b5;
+      --card: #ffffff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.8;
+      min-height: 100vh;
+    }
+
+    /* Circuit line animation */
+    .circuit-header {
+      width: 100%;
+      overflow: hidden;
+      padding: 0;
+      margin-bottom: 0;
+    }
+
+    .circuit-header svg {
+      width: 100%;
+      height: 60px;
+      display: block;
+    }
+
+    .circuit-path {
+      stroke: var(--accent);
+      stroke-width: 2.5;
+      fill: none;
+      stroke-dasharray: 800;
+      stroke-dashoffset: 800;
+      animation: drawLine 2s ease forwards;
+    }
+
+    .circuit-dot {
+      fill: #e05a5a;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes drawLine {
+      to { stroke-dashoffset: 0; }
+    }
+
+    @keyframes pulse {
+      0%, 100% { r: 4; opacity: 1; }
+      50% { r: 6; opacity: 0.6; }
+    }
+
+    header {
+      background: var(--bg);
+      padding: 12px 40px 40px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .game-title {
+      font-family: 'Space Mono', monospace;
+      font-size: clamp(28px, 5vw, 48px);
+      font-weight: 700;
+      letter-spacing: -1px;
+      color: var(--ink);
+      line-height: 1;
+    }
+
+    .game-subtitle {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 4px;
+      color: var(--muted);
+      margin-top: 6px;
+      text-transform: uppercase;
+    }
+
+    .doc-label {
+      display: inline-block;
+      margin-top: 20px;
+      background: var(--accent);
+      color: white;
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 2px;
+      padding: 6px 14px;
+      text-transform: uppercase;
+    }
+
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 60px 24px 100px;
+    }
+
+    .meta {
+      display: flex;
+      gap: 32px;
+      margin-bottom: 56px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--line);
+      flex-wrap: wrap;
+    }
+
+    .meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .meta-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .meta-value {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    section {
+      margin-bottom: 52px;
+    }
+
+    h2 {
+      font-family: 'Space Mono', monospace;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    h2::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--line);
+    }
+
+    p {
+      font-size: 15px;
+      color: #3a3530;
+      margin-bottom: 14px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 14px;
+    }
+
+    ul li {
+      font-size: 15px;
+      color: #3a3530;
+      padding: 6px 0 6px 20px;
+      position: relative;
+      border-bottom: 1px solid var(--line);
+    }
+
+    ul li:last-child { border-bottom: none; }
+
+    ul li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+    }
+
+    .highlight-box {
+      background: var(--card);
+      border-left: 3px solid var(--accent);
+      padding: 20px 24px;
+      margin: 24px 0;
+      font-size: 14px;
+      color: #3a3530;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid currentColor;
+    }
+
+    a:hover { opacity: 0.7; }
+
+    .contact-block {
+      background: var(--card);
+      border: 1px solid var(--line);
+      padding: 28px 32px;
+      margin-top: 16px;
+    }
+
+    .contact-block p {
+      margin-bottom: 8px;
+    }
+
+    .contact-block .contact-email {
+      font-family: 'Space Mono', monospace;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    footer {
+      text-align: center;
+      padding: 32px;
+      border-top: 1px solid var(--line);
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 1px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="circuit-header">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+      <path class="circuit-path" d="M0,30 L200,30 L220,10 L280,10 L300,30 L500,30 L520,50 L560,50 L580,30 L800,30 L820,10 L880,10 L900,30 L1200,30" />
+      <circle class="circuit-dot" cx="600" cy="30" r="4" />
+    </svg>
+  </div>
+
+  <header>
+    <div class="game-title">ONE LINE CITY</div>
+    <div class="game-subtitle">Power the City Grid</div>
+    <div class="doc-label">Privacy Policy</div>
+  </header>
+
+  <main>
+
+    <div class="meta">
+      <div class="meta-item">
+        <span class="meta-label">Developer</span>
+        <span class="meta-value">Novexio</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Effective Date</span>
+        <span class="meta-value">March 29, 2026</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Platform</span>
+        <span class="meta-value">Android (Google Play)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Contact</span>
+        <span class="meta-value">walkerrider068@gmail.com</span>
+      </div>
+    </div>
+
+    <section>
+      <h2>Overview</h2>
+      <p>One Line City is a puzzle game developed by Novexio. This Privacy Policy explains how information is collected, used, and protected when you play One Line City on Android.</p>
+      <p>We do not collect your name, email address, or any personally identifiable information directly. However, our app uses third-party advertising services that may collect certain data automatically.</p>
+    </section>
+
+    <section>
+      <h2>Information Collected</h2>
+      <p>One Line City itself does not directly collect personal data. All game progress (levels completed, hints used, scores) is stored locally on your device only and is never transmitted to our servers.</p>
+      <p>The following data may be collected automatically by our third-party advertising partner, Google AdMob:</p>
+      <ul>
+        <li>Advertising identifier (Android Advertising ID)</li>
+        <li>Device type, model, and operating system version</li>
+        <li>IP address and approximate location</li>
+        <li>Ad interaction data (impressions, clicks)</li>
+        <li>App usage information for ad targeting purposes</li>
+      </ul>
+      <div class="highlight-box">
+        This data is collected and processed by Google LLC under their own privacy policy. Novexio does not have direct access to this data.
+      </div>
+    </section>
+
+    <section>
+      <h2>How Information Is Used</h2>
+      <p>Data collected via Google AdMob is used solely for the purpose of serving advertisements within the app. This includes:</p>
+      <ul>
+        <li>Displaying relevant ads during gameplay</li>
+        <li>Showing rewarded ads when the player opts in for bonus hints</li>
+        <li>Showing interstitial ads at natural transition points between levels</li>
+        <li>Measuring ad performance and frequency</li>
+      </ul>
+      <p>We do not use any collected data for profiling, selling to third parties, or any purpose outside of ad serving.</p>
+    </section>
+
+    <section>
+      <h2>Third-Party Services</h2>
+      <p>One Line City uses Google AdMob for advertising. Google's data practices are governed by their own privacy policy:</p>
+      <ul>
+        <li><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+        <li><a href="https://support.google.com/admob/answer/6128543" target="_blank">How Google uses data in AdMob apps</a></li>
+      </ul>
+      <p>You can opt out of personalized advertising at any time through your Android device settings under <strong>Google → Ads → Opt out of Ads Personalization</strong>.</p>
+    </section>
+
+    <section>
+      <h2>Data Storage</h2>
+      <p>All game data including your progress, level completions, hint counts, and scores is stored locally on your device using shared preferences. This data is never uploaded to external servers by Novexio.</p>
+      <p>Clearing app data or uninstalling the app will permanently delete all locally stored game progress.</p>
+    </section>
+
+    <section>
+      <h2>Children's Privacy</h2>
+      <p>One Line City is a general audience puzzle game. We do not knowingly collect personal information from children under the age of 13. The app uses standard AdMob ad serving which complies with Google's policies on child-directed content.</p>
+    </section>
+
+    <section>
+      <h2>Your Rights</h2>
+      <ul>
+        <li>Opt out of personalized ads via Android device settings</li>
+        <li>Reset your advertising ID via Google Settings → Ads</li>
+        <li>Delete all local game data via Settings → Reset All Progress inside the app</li>
+        <li>Request information about data practices by contacting us directly</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated effective date. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+    </section>
+
+    <section>
+      <h2>Contact Us</h2>
+      <p>If you have any questions about this Privacy Policy or your data, please contact us:</p>
+      <div class="contact-block">
+        <p><strong>Developer:</strong> Novexio</p>
+        <p><strong>Email:</strong></p>
+        <p class="contact-email">walkerrider068@gmail.com</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 Novexio · One Line City · All rights reserved
+  </footer>
+
+</body>
+</html>
